@@ -12,12 +12,14 @@ public class Regex {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(name);
         if (matcher.matches()) {
-            System.out.println("\nYour name " + name + " is in the correct format");
+            System.out.println("\nYour name " + name + " is in the correct format.");
 
         }else {
             System.out.println("\nYour name is not in format.");
             if (name.equals(UserDetails.first_name)) {
                 UserDetails.firstname();
+            } else if (name.equals(UserDetails.last_name)) {
+                UserDetails.lastname();
             }
         }
     }
