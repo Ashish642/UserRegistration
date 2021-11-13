@@ -47,5 +47,18 @@ public class Regex {
             UserDetails.phoneNumber(phoneNumber);
         }
     }
+    public static void password(String password) {
+        regex = "^[0-9a-zA-Z]{8,}$";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(password);
+        if (matcher.matches()) {
+            System.out.println("\nyour password "+ password + " is in correct format.");
+
+        }else {
+            System.out.println("\n Your password is not in format");
+            UserDetails.password(password);
+
+        }
+    }
 
 }
