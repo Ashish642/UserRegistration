@@ -48,7 +48,7 @@ public class Regex {
         }
     }
     public static void password(String password) {
-        regex = "^(?.=*[0-9a-z])(?=.*[A-Z]).{8,}$";
+        regex = "^(?=.*[0-9])(?=.*[a-z](?=.*[A-Z]).{8,}$)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
         if (matcher.matches()) {
