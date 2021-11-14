@@ -10,6 +10,10 @@ public class UserDetails extends Regex {
         UserDetails details = new UserDetails();
         details.firstname();
         details.lastname();
+        details.mail();
+        details.password();
+        details.phoneNumber();
+
 
 
     }
@@ -25,4 +29,23 @@ public class UserDetails extends Regex {
         last_name = scan.next();
         Regex.name(last_name);
     }
+    public static void mail() {
+        System.out.println("\nEnter the mail with following valid format: ");
+        System.out.println("\nFormat is E.g. abc.xyz@bl.co.in(In that abc , bl & co is mandatory)");
+        mail_id = scan.next();
+        Regex.mail(mail_id);
+    }
+    public static void phoneNumber() {
+        System.out.println("\nEnter the phone number with country code and leave gap b/w them (E.g.:91 789540650023):");
+        phone_number = scan.next();
+        Regex.phoneNumber(phone_number);
+
+    }
+    public static void password() {
+        System.out.println("\nEnter the password with following rule");
+        System.out.println("1. minimum 8 characters\n.At Least one uppercase");
+        password = scan.next();
+        Regex.password(password);
+    }
+
 }
